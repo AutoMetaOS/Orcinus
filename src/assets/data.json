@@ -1,0 +1,46 @@
+[
+    {
+        "id": "duo",
+        "title": "Duolingo",
+        "icon": "/assets/duolingo.png",
+        "items": [
+            {
+                "id": "de",
+                "title": "Deutsch",
+                "icon": "🇩🇪"
+            },
+            {
+                "id": "es",
+                "title": "Español",
+                "icon": "🇪🇸"
+            },
+            {
+                "id": "jp",
+                "title": "日本語",
+                "icon": "🇯🇵"
+            }
+        ]
+    },
+    {
+        "id": "drop",
+        "title": "Drops",
+        "icon": "/assets/drops.png",
+        "items": [
+            {
+                "id": "de",
+                "title": "Deutsch",
+                "icon": "🇩🇪"
+            },
+            {
+                "id": "es",
+                "title": "Español",
+                "icon": "🇪🇸"
+            },
+            {
+                "id": "jp",
+                "title": "日本語",
+                "icon": "🇯🇵"
+            }
+        ]
+    }
+]
