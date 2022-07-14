@@ -1,5 +1,9 @@
-# Svelte + Vite
+<div align="center">
+  <img src="./public/orcinus.svg" alt="Svelte" width="200" />
+  <h1>Orcinus</h1>
+</div>
 
+## Format
 ```ts
 interface Trackable{
   id: string;
