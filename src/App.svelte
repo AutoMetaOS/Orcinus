@@ -1,48 +1,48 @@
-<script>
-  import svelteLogo from "./assets/svelte.svg";
+<script lang="typescript">
+  import Data from "./assets/data.json";
   import Counter from "./lib/Counter.svelte";
 </script>
 
-<main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
+<main class="†c w-100">
+  <h1>Orcinus</h1>
+
+  <div class="ƒ" style="overflow-x:scroll;">
+    {#each Data as cat}
+      <div class="m10" id={cat.id}>
+        <div class="ƒ p5 fw5 ∆-ct title">
+          <img
+            class="rx5 icon"
+            src={cat.icon}
+            alt={cat.title.replaceAll(" ", "-")}
+          />
+          {cat.title}
+        </div>
+        <ul class="m0 p0">
+          {#each cat.items as item}
+            <li class="m5" id={item.id}>
+              <Counter icon={item.icon} name={item.title} id={item.id} />
+            </li>
+          {/each}
+        </ul>
+      </div>
+    {/each}
   </div>
-  <h1>Vite + Svelte</h1>
-
-  <div class="card">
-    <Counter />
-  </div>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank"
-      >SvelteKit</a
-    >, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">Click on the Vite and Svelte logos to learn more</p>
 </main>
 
 <style>
   main {
     background-color: #242424;
   }
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
+  ul {
+    list-style-type: none;
   }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+  .title {
+    font-size: 1.25rem;
+    text-transform: uppercase;
   }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
-  }
-  .read-the-docs {
-    color: #888;
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
   }
 </style>
