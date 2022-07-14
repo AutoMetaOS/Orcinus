@@ -1,6 +1,21 @@
 <script lang="typescript">
+  export let worker;
+
+  import { onMount } from "svelte";
   import Data from "./assets/data.json";
   import Counter from "./lib/Counter.svelte";
+  import { getUrl } from "./api";
+
+  onMount(async () => {
+    const hash = await worker({
+      exec: "hash",
+      params: ["Punam2601"],
+    });
+
+    console.log(getUrl("list"));
+
+    console.log(hash);
+  });
 </script>
 
 <main class="†c w-100">

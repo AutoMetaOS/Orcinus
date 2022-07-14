@@ -30,7 +30,7 @@
   }
 
   button:hover {
-    border-color: #646cff;
+    border-color: var(--theme);
   }
 
   button:focus,
